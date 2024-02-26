@@ -1,0 +1,330 @@
+---
+title: "Pediatric Nutritional Medicine and Intestinal Microbiology report"
+author: "Ilia Popov"
+date: "2023-06-16"
+output:
+  html_document:
+    latex_engine: xelatex
+    df_print: default
+    highlight: zenburn
+    toc: yes
+    toc_depth: 3
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+bibliography: packages.bib
+mainfont: NanumGothic
+editor_options:
+  markdown:
+    wrap: 72
+---
+
+# **Loading libraries and data**
+
+First, I loaded all the libraries needed for the data analysis.
+
+```{r libraries, message=FALSE}
+library(Maaslin2)
+library(tidyverse)
+library(zCompositions)
+library(ggrepel)
+library(ggtext)
+```
+
+```{r}
+main_dir <- dirname(rstudioapi::getSourceEditorContext()$path) 
+setwd(main_dir)
+```
+
+Then I uploaded the data (taxonomy, metadata, read counts of 16S rRNA gene amplicons)<br>
+Also I made metadata fit the data analysis format.
+
+```{r}
+metadata <- read.table('metadata.csv', 
+                       sep=',', comment='', head=T, row.names = 1)
+
+metadata$name_taxa <- paste('X', metadata$name_taxa, sep ='')
+rownames(metadata) <- metadata$name_taxa
+
+metadata <- metadata %>%
+  dplyr::rename(sample_id = name_taxa)
+
+metadata <- metadata[,-29]
+
+metadata <- metadata %>% 
+  dplyr::rename(Manufacturing_facilities = X)
+
+metadata$Healthy <- sub(1, 'No', metadata$Healthy)
+metadata$Healthy <- sub(2, 'Yes', metadata$Healthy)
+
+taxonomy <- read.csv("taxonomy.csv")
+taxonomy <- taxonomy[,-8]
+
+counts <- read.csv("feature_table.csv")
+```
+
+## Metadata
+
+Let's take a look at metadata
+
+```{r}
+head(metadata)
+```
+
+It contains 27 features at all.
+
+## Taxonomy
+
+```{r}
+head(taxonomy)
+```
+
+## Counts
+
+```{r}
+head(counts[c(1:3)])
+```
+
+# **Data processing**
+
+First, I assigned to the variable 'otu_counts' a dataframe, which was created on the basis of the counts table.
+
+```{r}
+OTU_counts <- counts %>%
+  dplyr::rename(OTU = OTU_ID) %>%
+  pivot_longer(-OTU, names_to="sample_id", values_to = "count")
+```
+
+The following command was used to create a table where:<br>
+One column corresponds to the sample number.<br>
+The other column corresponds to the number of counts of that sample.
+
+```{r}
+sampling_coverage <- OTU_counts %>%
+  group_by(sample_id) %>%
+  summarise(n_seqs = sum(count))
+
+head(sampling_coverage, 5)
+```
+
+## Filtering the sampling_coverage
+
+Then I created the histogram where:<br>
+- The X axis shows the counts.<br>
+- The Y axis shows the number of samples that correspond to the values of the number of counts.
+
+```{r}
+sampling_coverage %>%
+  ggplot(aes(x=n_seqs)) +
+  geom_histogram(binwidth=250) +
+  theme_classic()+
+  coord_cartesian(xlim=c(0, 40000))+
+  geom_vline(xintercept = c(5000, 5000), col = "red")
+```
+
+It can be seen that 2 samples have less than 5000 counts.<br>
+So then I created another curve graph in which the threshold was indicated<br>
+As it was determined from the previous graph, presumably the threshold should be at 5000 counts.<br>
+<br>
+- The X axis indicates the samples.<br>
+- The Y axis indicates the number of counts.<br>
+<br>
+It can be seen that two samples in the graph are below 5000 counts.
+
+```{r}
+sampling_coverage %>%
+  arrange(n_seqs) %>%
+  ggplot(aes(x=1:nrow(.), y=n_seqs))+
+  geom_line()+
+  theme_classic()+
+  coord_cartesian(xlim=c(0,20), ylim=c(0, 20000)) +
+  geom_hline(yintercept = c(5000, 5000), col = "red")
+```
+
+Then I displayed the same data, but in the form of a jitter-plot.<br>
+Now it is clearly seen that 2 samples below the threshold should be removed.
+
+```{r}
+sampling_coverage %>%
+  ggplot(aes(x=1, y=n_seqs)) +
+  geom_jitter() +
+  theme_classic() +
+  coord_cartesian(ylim=c(0, 25000))+
+  geom_hline(yintercept = c(5000, 5000), col = "red")
+```
+
+To identify the samples to be removed from the dataset, I used the following command, which outputed the sample IDs and the number of counts in ascending order:
+
+```{r}
+sampling_coverage %>%
+  arrange(n_seqs) %>%
+  print(n = 10)
+```
+
+Now it is seen that:<br>
+Sample `X63A57` has a total of 45 counts.<br>
+Sample `X63B47` has only 1178 counts.<br>
+Thus, I found samples with relatively low counts number that should be removed from the dataset in order to decrease the false positives rate.<br>
+<br>
+To remove them, I used the following command:
+
+```{r}
+metadata_rarefied <- metadata %>%
+  filter(sample_id != "X63A57")%>%
+  filter(sample_id != "X63B47")
+```
+
+Then I merged taxonomy and counts tables, filtered only genera taxonomy rank (for other taxonomy levels I made the same thing) to get table with counts of identified genera.
+
+```{r}
+otu_rel_abund <- dplyr::inner_join(metadata, OTU_counts, by="sample_id") %>%
+  dplyr::inner_join(., taxonomy, by="OTU", multiple = "all") %>%
+  group_by(sample_id) %>%
+  ungroup() %>%
+  pivot_longer(c("Kingdom", "Phylum", "Class", "Order", "Genus", "OTU"),
+               names_to="level",
+               values_to="taxon")
+
+counts_genus <- otu_rel_abund %>%
+  filter(level=="Genus") %>%
+  group_by(sample_id, taxon) %>%
+  summarise(count = sum(count), .groups = "drop") %>%
+  group_by(taxon) %>%
+  pivot_wider(names_from = taxon, values_from = count)
+
+head(counts_genus, 10)
+```
+
+As I found two samples that are not suitable for the statistical analysis, I removed them from the dataset.
+
+```{r}
+counts_genus_rarefied <- counts_genus %>%
+  filter(sample_id != "X63A57")%>%
+  filter(sample_id != "X63B47")
+```
+
+With this command I changed rownames in the table to the sample IDs, which is required by the Maaslin2 package (which previosly was also made for the metadata).
+
+```{r}
+write.csv(counts_genus_rarefied, "counts_genus_rarefied.csv")
+
+taxon_counts_genus_rarefied <- read.table('counts_genus_rarefied.csv', sep=',',
+                                  comment='', head=T, row.names=1)
+rownames(taxon_counts_genus_rarefied) <- taxon_counts_genus_rarefied$sample_id
+taxon_counts_genus_rarefied <- taxon_counts_genus_rarefied[, -1]
+```
+
+Within these steps I continued decreasing false positive rate.<br>
+In particular, I filtered genera with less than 4 counts in 10% of samples to decrease the number of hypothesis testing.<br>
+Anyway, differences in rarely abundant taxa would not have any biological meaning.
+
+```{r}
+taxon_counts_genus_rarefied_include <- colSums(taxon_counts_genus_rarefied>4) > 0.1 * ncol(taxon_counts_genus_rarefied)
+taxon_counts_genus_rarefied_filtered <- taxon_counts_genus_rarefied[, taxon_counts_genus_rarefied_include]
+```
+
+Then I transformed the counts table to the relative abundances table.<br>
+It is also very important to do so with this type of data (16S rRNA) to decrease false positives rate.<br>
+https://www.frontiersin.org/articles/10.3389/fmicb.2017.02224/full
+
+```{r}
+taxon_genus_abundance = cmultRepl(taxon_counts_genus_rarefied_filtered )
+```
+
+# **Linear modelling for the investigation significant associations between bacterial abundance and clinical features with Maaslin2**
+
+Now it is time for linear modelling with Maaslin2.<br>
+Prior to this we filtered the data several times.<br>
+Minimal prevalence of genera for the statistical analysis was set to 0%.
+<br>
+
+```{r, include=FALSE}
+fit_data = Maaslin2(input_data     = taxon_genus_abundance, 
+                    input_metadata = metadata_rarefied, 
+                    min_prevalence = 0,
+                    #normalization  = "TMM",
+                    output         = "Sanitation_Genus_rel_abund",
+                    analysis_method = "LM",
+                    max_significance = 0.2,
+                    correction = "BH",
+                    plot_heatmap = TRUE,
+                    plot_scatter = TRUE,
+                    fixed_effects  = c("Clean_water_facilities", "Toilet",
+                                       "Waste_water_disposal_facility",
+                                       "Manufacturing_facilities"))
+```
+
+## Making better visualisation
+
+I do not like default heatmap and scatter plots from Maaslin2 output (I find them ugly and not suitable for publication).<br>
+<br>
+So, I made custom ggplot2-based heatmap.<br>
+<br>
+For this I uploaded Maaslin2 results and made the genera names in italics (as it should be in civilized microbiology world).<br>
+Default Maaslin2 output represents genera names not in italics format.
+
+```{r}
+DAA_res_genus_sanitation <- read.csv("Sanitation_Genus_rel_abund/significant_results.tsv", 
+                                     sep = "")%>%
+  mutate(feature = str_replace(feature,
+                               "Unclassified_(.*)", "Unclassified *\\1*"),
+         feature = str_replace(feature,
+                               "(.*)_group", "\\1"),
+         feature = str_replace(feature,
+                               "X.(.*)", "\\1"),
+         feature = str_replace(feature,
+                               "^(\\S*)$", "*\\1*")) %>%
+  mutate(metadata = factor(metadata,
+                        levels=c("Toilet",
+                                 "Manufacturing_facilities",
+                                 "Clean_water_facilities",
+                                 "Waste_water_disposal_facility")))
+```
+
+With this command I created custom heatmap.<br>
+<br>
+Heatmap with genera, the relative abundance of which had significant associations with clinical metadata.
+
+```{r, fig.align="center", fig.height=6, fig.width=14}
+
+ggplot(data=DAA_res_genus_sanitation, aes(x=feature, fill=coef, y=metadata)) +
+  geom_tile()+
+  theme_classic()+
+  scale_fill_gradient2(name = "log2fc<br>(<i>q</i>-value<0.2)<br>", 
+                       low = "violet", 
+                       high = "green", 
+                       mid = "white",
+                       guide = "colourbar")+#,
+                       #limits = c(-1.6, 1.6))+
+  theme(axis.text.y = element_markdown(size=14), 
+        axis.text.x = element_markdown(size=10, angle = 35, hjust = 0.95),
+        legend.title = element_markdown(size=14),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        legend.text = element_text(size=10),
+        legend.key.height = unit(0.5, 'cm'))+
+  scale_y_discrete(breaks=c("Toilet",
+                            "Manufacturing_facilities",
+                            "Clean_water_facilities",
+                            "Waste_water_disposal_facility"),
+                   labels=c("Toilet",
+                            "Manufacturing facilities",
+                            "Clean water facilities",
+                            "Waste water disposal facility"))+
+  labs(x=NULL,
+       y=NULL)
+```
+
+And finally, let's save the heatmap!
+
+```{r}
+ggsave("Heatmaps/genus_sanitation.png", width = 11, height = 3.5, dpi=600)
+```
+
+# **References**
+
+The following packages must be installed to work with the dataset:
+
+```{r}
+knitr::write_bib(c("Maaslin2", "tidyverse", "zCompositions", "ggrepel", "ggtext"), file = "packages.bib")
+```
