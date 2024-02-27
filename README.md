@@ -1,5 +1,5 @@
 # PNMIM
-This repository contains a script for analysing metagenomic data during an internship in Indonesia and its results 
+Repository for script script to analyse metagenomic data during an internship in Indonesia and its results
 
 1) `PNMIM report.Rmd` - contains a script to process the raw data and run [Maaslin2](https://github.com/biobakery/Maaslin2)
 2) `PNMIM-report.html` - contains the report on the study
