@@ -23,7 +23,7 @@ _Visualization:_
 Custom visualizations using ggplot2 facilitated a clear and insightful representation of the associations uncovered by the linear models.
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/PNMIM/blob/1626555b17e7e583e51017bcd1a8c00e6e7f7b58/img/Metagenomic%20study%20design.png" align='center', width="100%">
+<img src="https://github.com/iliapopov17/PNMIM/blob/a61f40c8c4c60be7aab835beb6d8af63b2aa147d/img/Metagenomic%20study%20design.jpg" align='center', width="100%">
 </div>
 
 _Figure 1. Study desing and results. On the left side of the figure there are children participants of the study. On the bottom picture I am with these wonderful children. The main part of figure shows pipeline of data analysis and its results_
@@ -48,3 +48,8 @@ In this repository you can find:
 2) `PNMIM-report.html` - contains the report on the study
 3) `Sanitation_Genus_rel_abund/figures/heatmap.png` - contains standart heatmap pictured by Maaslin2
 4) `Heatmaps/genus_sanitation.png` - contains exactly the same heatmap, but more beautiful and in publication ready quality
+
+### Publication
+
+These results are accepted to be published in PLoS ONE<br>
+Paper name: Gut microbiota differences in stunted and normal-lenght children aged 36 – 45 months in East Nusa Tenggara, Indonesia
