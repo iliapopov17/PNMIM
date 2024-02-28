@@ -19,7 +19,7 @@ _Figure 1. Clinical trial design._
 
 ### Genomic Insights: Unraveling Safety Aspects of Probiotic _Lpb. plantarum_ IS-10506
 
-This [internship report](Genome%20annotation) unveils a comprehensive genome-based safety assessment of the probiotic strain Lpb. plantarum IS-10506. The study explores bacteriocin clusters and CRISPR sequences, shedding light on its antimicrobial potential and defense mechanisms.
+This [internship report](Genome%20annotation) unveils a comprehensive genome-based safety assessment of the probiotic strain _Lpb. plantarum_ IS-10506. The study explores bacteriocin clusters and CRISPR sequences, shedding light on its antimicrobial potential and defense mechanisms.
 
 ### Microbial Insights: Examining Gut Differences in Growing Children
 
