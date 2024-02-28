@@ -67,4 +67,4 @@ Results are published at:
 
 [Umanets, A., Surono, I.S. & Venema, K. I am better than I look: genome based safety assessment of the probiotic Lactiplantibacillus plantarum IS-10506. BMC Genomics 24, 518 (2023).](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-023-09495-y) https://doi.org/10.1186/s12864-023-09495-y
 
-> [You can find me in the `Acknowledgements` area](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-023-09495-y#Ack1)
+> You can find me in the [`Acknowledgements`](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-023-09495-y#Ack1) area
