@@ -14,7 +14,7 @@ The anticipation of CRISPR (clustered regularly interspaced short palindromic re
 Upon scrutinizing the complete genome sequence of _Lpb. plantarum_ IS-10506 isolate, a genetic location associated with the production of bacteriocin (_pln_ locus) was detected. The assessment of this strain demonstrated the presence of genes responsible for the synthesis of two peptides, namely plantaricin _plnF_ (class IIb) and _plnE_ (unclassified) (Figure 1 & Table 1). These peptides were previously identified in other _Lpb. plantarum strains_[3].
 
 <div style='justify-content: center'>
-<img src="img/BAGEL results.png" align='center', width="100%">
+<img src="https://github.com/iliapopov17/PNMIM/blob/9149fdc788ba289ab09e74dce2b701504309e370/img/BAGEL%20results.png" align='center', width="100%">
 </div>
 
 _Figure 1. An outline of the plantaricin operons observed in the evaluated Lpb. plantarum IS-10506 is presented. Gene maps exhibit the full plantaricin sections, wherein the arrows represent ORFs that are color-coded based on their projected functions. Additionally, BAGEL4 was used to predict the promotors and terminators, which are also highlighted in the maps._
@@ -40,6 +40,8 @@ The CRISPR systems that contain clustered regularly interspaced short palindromi
 
 _Table 2. Genomic features of CRISPR-Cas system in Lpb. plantarum IS-10506._
 
+|Feature|Description|
+|-------|-----------|
 |Start|2199452|
 |End|2200081|
 |DR consensus|GTCTTGAATAGTAGTCATATCAAACAGGTTTAGAAC|
