@@ -28,7 +28,7 @@ _Table 1. Amino acids sequence of the plantaricin encoding genes belonging to th
 
 #### CRISPRCas
 
-_Lpb. plantarum_ IS-10506 is projected to possess a type II CRISPR-Cas system, which includes four cas genes – cas9, cas1, cas2, and cns2. The primary attributes of the CRISPR system are summarized in Table 2.
+_Lpb. plantarum_ IS-10506 is projected to possess a type II CRISPR-Cas system, which includes four cas genes – _cas9_, _cas1_, _cas2_, and _cns2_. The primary attributes of the CRISPR system are summarized in Table 2.
 The CRISPR systems that contain clustered regularly interspaced short palindromic repeats could target protospacer sequences stored in the CRISPR array, which provides a defensive mechanism against phages and plasmids that have been previously encountered (Table 3).
 
 |Gene name|Genome position start|End|Orientation|
