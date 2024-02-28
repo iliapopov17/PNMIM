@@ -10,14 +10,17 @@ The crux of my responsibilities revolved around assistanship of organization and
 Blood and stool samples were systematically gathered from the participants.<br>
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/PNMIM/blob/e2335b4b3dc41e1973661e908dfb4c08b6f9dfa4/img/Study%20design.png" align='center', width="100%">
+<img src="https://github.com/iliapopov17/PNMIM/blob/9aa2ee2acc504093fb1632ff3d99d4c8ba294704/img/Study%20design.png" align='center', width="100%">
 </div>
 
-_Clinical trial design._
+_Figure 1. Clinical trial design._
 
 ## Bioinformatic works
 
-### Genome annotation of _Lpb. plantarum_ strain IS-10506
+### Genomic Insights: Unraveling Safety Aspects of Probiotic _Lpb. plantarum_ IS-10506
 
 This [internship report](Genome%20annotation%20L.%20plantarum%20strain%20IS-10506) unveils a comprehensive genome-based safety assessment of the probiotic strain Lpb. plantarum IS-10506. The study explores bacteriocin clusters and CRISPR sequences, shedding light on its antimicrobial potential and defense mechanisms.
 
+### Microbial Insights: Examining Gut Differences in Growing Children
+
+This [internship report](Metagenomic%20assay) presents a multivariate analysis of the relationship between clinical metadata and microbiome characteristics in a comparative study of gut microbiota profiles in stunted and normal growing children aged 36-45 months. V3-V4 16s rRNA amplicon sequencing data from faecal samples of the children participating in the study were used for the analyses.
