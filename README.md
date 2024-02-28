@@ -10,7 +10,7 @@ The crux of my responsibilities revolved around assistanship of organization and
 Blood and stool samples were systematically gathered from the participants.<br>
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/PNMIM/blob/9aa2ee2acc504093fb1632ff3d99d4c8ba294704/img/Study%20design.png" align='center', width="100%">
+<img src="https://github.com/iliapopov17/PNMIM/blob/84c205eaac7977f7e80cab94097b9f2fcc0412ad/img/Study%20design.jpg" align='center', width="100%">
 </div>
 
 _Figure 1. Clinical trial design._
@@ -19,7 +19,7 @@ _Figure 1. Clinical trial design._
 
 ### Genomic Insights: Unraveling Safety Aspects of Probiotic _Lpb. plantarum_ IS-10506
 
-This [internship report](Genome%20annotation%20L.%20plantarum%20strain%20IS-10506) unveils a comprehensive genome-based safety assessment of the probiotic strain Lpb. plantarum IS-10506. The study explores bacteriocin clusters and CRISPR sequences, shedding light on its antimicrobial potential and defense mechanisms.
+This [internship report](Genome%20annotation) unveils a comprehensive genome-based safety assessment of the probiotic strain Lpb. plantarum IS-10506. The study explores bacteriocin clusters and CRISPR sequences, shedding light on its antimicrobial potential and defense mechanisms.
 
 ### Microbial Insights: Examining Gut Differences in Growing Children
 
