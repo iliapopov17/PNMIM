@@ -1,4 +1,4 @@
-## Research topic:
+## Research topic
 Pediatric Nutritional Medicine and Intestinal Microbiology (repository name is the acronym)
 
 ## Field Work
