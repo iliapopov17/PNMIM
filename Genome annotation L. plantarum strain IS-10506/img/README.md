@@ -1,6 +1,10 @@
+### Abstract
+
+Ensuring the safety of probiotic strains utilized in human and animal trials is imperative. The emergence of genome-based safety assessments for probiotics, marked by their cost-effectiveness and expeditious nature, has become an integral component of national regulations governing probiotic-containing foods in Indonesia. This report delves into the genome-based safety assessment of the probiotic strain _Lpb. plantarum_ IS-10506, employing advanced bioinformatic tools to explore bacteriocin clusters and CRISPR sequences. The study contributes valuable insights for a comprehensive understanding of probiotic safety, aligning with the evolving landscape of regulatory frameworks.
+
 ### Materials and methods
 
-To predict the bacteriocin clusters and their organization BAGEL4 software was used[1].
+The genome of the probiotic strain _L. plantarum_ IS-10506 was sequenced using Nanopore, assembled, annotated and screened for useful genomic features.To predict the bacteriocin clusters and their organization BAGEL4 software was used[1].
 The anticipation of CRISPR (clustered regularly interspaced short palindromic repeats) sequences was accomplished using CRISPRCasFinder[2].
 
 ### Results
@@ -44,6 +48,10 @@ _Table 2. Genomic features of CRISPR-Cas system in Lpb. plantarum IS-10506._
 |Direction|+|
 
 _Table 3. Analysis of CRISPR II system direct repeats._
+
+### Discussion
+
+The genomic exploration of _L. plantarum_ IS-10506 reveals a sophisticated genetic architecture, providing a foundation for its safety assessment. The presence of bacteriocin-encoding genes underscores its antimicrobial potential, crucial for its probiotic functionality. Simultaneously, the identified CRISPR-Cas system suggests a defense mechanism against foreign genetic elements. 
 
 ### References
 
