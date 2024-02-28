@@ -28,7 +28,7 @@ _Table 1. Amino acids sequence of the plantaricin encoding genes belonging to th
 
 #### CRISPRCas
 
-_Lpb. plantarum_ IS-10506 is projected to possess a type II CRISPR-Cas system, which includes four cas genes – cas9, cas1, cas2, and cns2. The primary attributes of the CRISPR system are summarized in Table 2.
+_Lpb. plantarum_ IS-10506 is projected to possess a type II CRISPR-Cas system, which includes four cas genes – _cas9_, _cas1_, _cas2_, and _cns2_. The primary attributes of the CRISPR system are summarized in Table 2.
 The CRISPR systems that contain clustered regularly interspaced short palindromic repeats could target protospacer sequences stored in the CRISPR array, which provides a defensive mechanism against phages and plasmids that have been previously encountered (Table 3).
 
 |Gene name|Genome position start|End|Orientation|
@@ -67,4 +67,4 @@ Results are published at:
 
 [Umanets, A., Surono, I.S. & Venema, K. I am better than I look: genome based safety assessment of the probiotic Lactiplantibacillus plantarum IS-10506. BMC Genomics 24, 518 (2023).](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-023-09495-y) https://doi.org/10.1186/s12864-023-09495-y
 
-> [You can find me in the `Acknowledgements` area](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-023-09495-y#Ack1)
+> You can find me in the [`Acknowledgements`](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-023-09495-y#Ack1) area
