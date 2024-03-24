@@ -15,7 +15,7 @@ Blood and stool samples were systematically gathered from the participants.<br>
 
 _Figure 1. Clinical trial design._
 
-## Bioinformatic works
+## Bioinformatic Works
 
 ### Genomic Insights: Unraveling Safety Aspects of Probiotic _Lpb. plantarum_ IS-10506
 
