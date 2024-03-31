@@ -51,5 +51,11 @@ In this repository you can find:
 
 ### Publication
 
-These results are accepted to be published in PLoS ONE<br>
-Paper name: Gut microbiota differences in stunted and normal-lenght children aged 36 – 45 months in East Nusa Tenggara, Indonesia
+Results are published in:
+
+[Surono, I.S., Popov, I., Verbruggen, S., Verhoeven, J., Kusumo, P.D., Venema, K. Gut microbiota differences in stunted and normal-lenght children aged 36–45 months in East Nusa Tenggara, Indonesia. PLoS ONE 19, e0299349 (2024).](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0299349) https://doi.org/10.1371/journal.pone.0299349
+
+### Data Availability
+
+Raw sequences and metadata have been deposited in the Sequence Read Archive under Bioproject number PRJNA1065733: (https://dataview.ncbi.nlm.nih.gov/object/PRJNA1065733).<br>
+All data are available as of Jan 17, 2024.
