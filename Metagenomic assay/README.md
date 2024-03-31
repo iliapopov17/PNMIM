@@ -53,7 +53,7 @@ In this repository you can find:
 
 Results are published in:
 
-[Surono, I.S., Popov, I., Verbruggen, S., Verhoeven, J., Kusumo, P.D., Venema, K. Gut microbiota differences in stunted and normal-lenght children aged 36–45 months in East Nusa Tenggara, Indonesia. PLoS ONE 19, e0299349 (2024).](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0299349) https://doi.org/10.1371/journal.pone.0299349
+[Surono, I.S., Popov, I., Verbruggen, S., Verhoeven, J., Kusumo, P.D., Venema, K. Gut microbiota differences in stunted and normal-length children aged 36–45 months in East Nusa Tenggara, Indonesia. PLoS ONE 19, e0299349 (2024).](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0299349) https://doi.org/10.1371/journal.pone.0299349
 
 ### Data Availability
 
