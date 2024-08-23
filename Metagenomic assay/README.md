@@ -23,10 +23,10 @@ _Visualization:_
 Custom visualizations using ggplot2 facilitated a clear and insightful representation of the associations uncovered by the linear models.
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/PNMIM/blob/a61f40c8c4c60be7aab835beb6d8af63b2aa147d/img/Metagenomic%20study%20design.jpg" align='center', width="100%">
+<img src="https://github.com/iliapopov17/PNMIM/blob/a61f40c8c4c60be7aab835beb6d8af63b2aa147d/img/metagenomic_pipeline.png" align='center', width="100%">
 </div>
 
-_Figure 1. Study desing and results. On the left side of the figure there are children participants of the study. On the bottom picture I am with these wonderful children. The main part of figure shows pipeline of data analysis and its results_
+_Figure 1. Pipeline overview._
 
 ### Results
 
@@ -57,5 +57,5 @@ Results are published in:
 
 ### Data Availability
 
-Raw sequences and metadata have been deposited in the Sequence Read Archive under Bioproject number PRJNA1065733: (https://dataview.ncbi.nlm.nih.gov/object/PRJNA1065733).<br>
+Raw sequences and metadata have been deposited in the [Sequence Read Archive under Bioproject number PRJNA1065733](https://dataview.ncbi.nlm.nih.gov/object/PRJNA1065733).<br>
 All data are available as of Jan 17, 2024.
