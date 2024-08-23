@@ -4,22 +4,22 @@ This study investigates gut microbiota variations in children aged 36-45 months,
 
 ### Materials and Methods
 
-_Data Collection:_
+- _Data Collection:_
 Stool samples from children participating in the study underwent amplicon sequencing (`FASTQ`) for microbiota analysis.
 
-_Data Processing:_
+- _Data Processing:_
 `Qiime2` and `DADA2` were employed for the denoising process, ensuring high-quality data for subsequent analysis.
 
-_Taxonomic Identification:_
+- _Taxonomic Identification:_
 `Silva NGS` was utilized to assign taxonomic labels to the denoised sequences, enhancing the precision of microbial identification.
 
-_Statistical Analysis:_
+- _Statistical Analysis:_
 Rarefaction, normalization, and filtering steps to minimize false positives and transform `ASV` counts into taxa relative abundance was made in `RStudio`.
 
-_Association Analysis:_
+- _Association Analysis:_
 The `MaAsLin2` and `LinDA` packages were instrumental in constructing linear models to elucidate associations between gut microbiota profiles and various parameters such as nutritional status, anthropometric measurements, and hygiene practices.
 
-_Visualization:_
+- _Visualization:_
 Custom visualizations using `ggplot2` facilitated a clear and insightful representation of the associations uncovered by the linear models.
 
 <div style='justify-content: center'>
