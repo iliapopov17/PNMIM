@@ -10,7 +10,7 @@ The crux of my responsibilities revolved around assistanship of organization and
 Blood and stool samples were systematically gathered from the participants.<br>
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/PNMIM/blob/84c205eaac7977f7e80cab94097b9f2fcc0412ad/img/Study%20design.jpg" align='center', width="100%">
+<img src="https://github.com/iliapopov17/PNMIM/blob/main/imgs/Study_design.jpg" align='center', width="100%">
 </div>
 
 _Figure 1. Clinical trial design._

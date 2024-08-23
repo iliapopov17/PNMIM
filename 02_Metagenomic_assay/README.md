@@ -5,25 +5,25 @@ This study investigates gut microbiota variations in children aged 36-45 months,
 ### Materials and Methods
 
 _Data Collection:_
-Stool samples from children participating in the study underwent amplicon sequencing (FASTQ) for microbiota analysis.
+Stool samples from children participating in the study underwent amplicon sequencing (`FASTQ`) for microbiota analysis.
 
 _Data Processing:_
-Qiime2 and DADA2 were employed for the denoising process, ensuring high-quality data for subsequent analysis.
+`Qiime2` and `DADA2` were employed for the denoising process, ensuring high-quality data for subsequent analysis.
 
 _Taxonomic Identification:_
-Silva NGS was utilized to assign taxonomic labels to the denoised sequences, enhancing the precision of microbial identification.
+`Silva NGS` was utilized to assign taxonomic labels to the denoised sequences, enhancing the precision of microbial identification.
 
 _Statistical Analysis:_
-Rarefaction, normalization, and filtering steps to minimize false positives and transform ASV counts into taxa relative abundance was made in RStudio.
+Rarefaction, normalization, and filtering steps to minimize false positives and transform `ASV` counts into taxa relative abundance was made in `RStudio`.
 
 _Association Analysis:_
-The MaAsLin2 and LinDA packages were instrumental in constructing linear models to elucidate associations between gut microbiota profiles and various parameters such as nutritional status, anthropometric measurements, and hygiene practices.
+The `MaAsLin2` and `LinDA` packages were instrumental in constructing linear models to elucidate associations between gut microbiota profiles and various parameters such as nutritional status, anthropometric measurements, and hygiene practices.
 
 _Visualization:_
-Custom visualizations using ggplot2 facilitated a clear and insightful representation of the associations uncovered by the linear models.
+Custom visualizations using `ggplot2` facilitated a clear and insightful representation of the associations uncovered by the linear models.
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/PNMIM/blob/main/img/metagenomic_pipeline.png" align='center', width="100%">
+<img src="https://github.com/iliapopov17/PNMIM/blob/main/imgs/metagenomic_pipeline.png" align='center', width="100%">
 </div>
 
 _Figure 1. Pipeline overview._
@@ -44,10 +44,10 @@ The observed variations in microbial abundance, particularly in wastewater dispo
 
 In this repository you can find:
 
-1) `PNMIM report.Rmd` - contains a script to process the raw data and run [MaAsLin2](https://github.com/biobakery/Maaslin2)
-2) `PNMIM-report.html` - contains the report on the study
-3) `Sanitation_Genus_rel_abund/figures/heatmap.png` - contains standart heatmap pictured by Maaslin2
-4) `Heatmaps/genus_sanitation.png` - contains exactly the same heatmap, but more beautiful and in publication ready quality
+1) [`PNMIM-report.Rmd`](https://github.com/iliapopov17/PNMIM/blob/main/02_Metagenomic_assay/PNMIM-report.Rmd) - contains a script to process the raw data and run [`MaAsLin2`](https://github.com/biobakery/Maaslin2)
+2) [`PNMIM-report.html`](https://github.com/iliapopov17/PNMIM/blob/main/02_Metagenomic_assay/PNMIM-report.html) - contains the report on the study in `.html` format
+3) [`Sanitation_Genus_rel_abund/figures/heatmap.png`](https://github.com/iliapopov17/PNMIM/blob/main/02_Metagenomic_assay/Sanitation_Genus_rel_abund/figures/heatmap.png) - contains standart heatmap pictured by [`MaAsLin2`](https://github.com/biobakery/Maaslin2)
+4) [`Heatmaps/genus_sanitation.png`](https://github.com/iliapopov17/PNMIM/blob/main/02_Metagenomic_assay/Heatmaps/genus_sanitation.png) - contains exactly the same heatmap, but more beautiful and in publication ready quality
 
 ### Publication
 
