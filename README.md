@@ -1,6 +1,12 @@
 ## Research topic
 Pediatric Nutritional Medicine and Intestinal Microbiology (repository name is the acronym)
 
+<div style='justify-content: center'>
+<img src="https://github.com/iliapopov17/PNMIM/blob/main/imgs/Study_design.jpg" align='center', width="100%">
+</div>
+
+_Figure 1. Clinical trial design._
+
 ## Field Work
 
 During the internship, I did a research expedition to the East Nusa Tenggara Province (Kupang City & North Kodi Township). This experience involved participation in the organization and execution of a clinical trial, a significant endeavor aimed at advancing our understanding of probiotic efficacy.<br>
@@ -10,10 +16,10 @@ The crux of my responsibilities revolved around assistanship of organization and
 Blood and stool samples were systematically gathered from the participants.<br>
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/PNMIM/blob/main/imgs/Study_design.jpg" align='center', width="100%">
+<img src="https://github.com/iliapopov17/PNMIM/blob/main/imgs/Field-work-map.png" align='center', width="100%">
 </div>
 
-_Figure 1. Clinical trial design._
+_Figure 2. Field work map. Dark blue dot - Jakarta, capital of Indonesia. Dark red dots - North Kodi Township & Kupang City._
 
 ## Bioinformatic Works
 
