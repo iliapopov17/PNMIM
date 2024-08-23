@@ -19,8 +19,8 @@ _Figure 1. Clinical trial design._
 
 ### Genomic Insights: Unraveling Safety Aspects of Probiotic _Lpb. plantarum_ IS-10506
 
-This [internship report](Genome%20annotation) unveils a comprehensive genome-based safety assessment of the probiotic strain _Lpb. plantarum_ IS-10506. The study explores bacteriocin clusters and CRISPR sequences, shedding light on its antimicrobial potential and defense mechanisms.
+This [internship report](01_Genome_annotation) unveils a comprehensive genome-based safety assessment of the probiotic strain _Lpb. plantarum_ IS-10506. The study explores bacteriocin clusters and CRISPR sequences, shedding light on its antimicrobial potential and defense mechanisms.
 
 ### Microbial Insights: Examining Gut Differences in Growing Children
 
-This [internship report](Metagenomic%20assay) presents a multivariate analysis of the relationship between clinical metadata and microbiome characteristics in a comparative study of gut microbiota profiles in stunted and normal growing children aged 36-45 months. V3-V4 16s rRNA amplicon sequencing data from faecal samples of the children participating in the study were used for the analyses.
+This [internship report](02_Metagenomic_assay) presents a multivariate analysis of the relationship between clinical metadata and microbiome characteristics in a comparative study of gut microbiota profiles in stunted and normal growing children aged 36-45 months. V3-V4 16s rRNA amplicon sequencing data from faecal samples of the children participating in the study were used for the analyses.
