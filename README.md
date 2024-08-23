@@ -21,6 +21,8 @@ Blood and stool samples were systematically gathered from the participants.<br>
 
 _Figure 2. Field work map. Dark blue dot - Jakarta, capital of Indonesia. Dark red dots - North Kodi Township & Kupang City._
 
+Map made with `rnaturalearth` in `RStudio`
+
 ## 💻 Bioinformatic Works
 
 ### 🧬 Genomic Insights: Unraveling Safety Aspects of Probiotic _Lpb. plantarum_ IS-10506
