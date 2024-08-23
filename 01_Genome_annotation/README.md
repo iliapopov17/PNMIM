@@ -4,8 +4,8 @@ Ensuring the safety of probiotic strains utilized in human and animal trials is 
 
 ### Materials and methods
 
-The genome of the probiotic strain _L. plantarum_ IS-10506 was sequenced using Nanopore, assembled, annotated and screened for useful genomic features.To predict the bacteriocin clusters and their organization BAGEL4 software was used[^1].
-The anticipation of CRISPR (clustered regularly interspaced short palindromic repeats) sequences was accomplished using CRISPRCasFinder[^2].
+The genome of the probiotic strain _L. plantarum_ IS-10506 was sequenced using `Nanopore`, assembled, annotated and screened for useful genomic features.To predict the bacteriocin clusters and their organization `BAGEL4` software was used[^1].
+The anticipation of `CRISPR` (clustered regularly interspaced short palindromic repeats) sequences was accomplished using CRISPRCasFinder[^2].
 
 ### Results
 
