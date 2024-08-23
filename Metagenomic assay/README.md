@@ -23,7 +23,7 @@ _Visualization:_
 Custom visualizations using ggplot2 facilitated a clear and insightful representation of the associations uncovered by the linear models.
 
 <div style='justify-content: center'>
-<img src="https://github.com/iliapopov17/PNMIM/blob/a61f40c8c4c60be7aab835beb6d8af63b2aa147d/img/metagenomic_pipeline.png" align='center', width="100%">
+<img src="https://github.com/iliapopov17/PNMIM/blob/main/img/metagenomic_pipeline.png" align='center', width="100%">
 </div>
 
 _Figure 1. Pipeline overview._
