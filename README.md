@@ -7,7 +7,7 @@ Pediatric Nutritional Medicine and Intestinal Microbiology (repository name is t
 
 _Figure 1. Clinical trial design._
 
-## Field Work
+## 🗺️ Field Work
 
 During the internship, I did a research expedition to the East Nusa Tenggara Province (Kupang City & North Kodi Township). This experience involved participation in the organization and execution of a clinical trial, a significant endeavor aimed at advancing our understanding of probiotic efficacy.<br>
 
@@ -21,12 +21,12 @@ Blood and stool samples were systematically gathered from the participants.<br>
 
 _Figure 2. Field work map. Dark blue dot - Jakarta, capital of Indonesia. Dark red dots - North Kodi Township & Kupang City._
 
-## Bioinformatic Works
+## 💻 Bioinformatic Works
 
-### Genomic Insights: Unraveling Safety Aspects of Probiotic _Lpb. plantarum_ IS-10506
+### 🧬 Genomic Insights: Unraveling Safety Aspects of Probiotic _Lpb. plantarum_ IS-10506
 
 This [internship report](01_Genome_annotation) unveils a comprehensive genome-based safety assessment of the probiotic strain _Lpb. plantarum_ IS-10506. The study explores bacteriocin clusters and CRISPR sequences, shedding light on its antimicrobial potential and defense mechanisms.
 
-### Microbial Insights: Examining Gut Differences in Growing Children
+### 🧫 Microbial Insights: Examining Gut Differences in Growing Children
 
 This [internship report](02_Metagenomic_assay) presents a multivariate analysis of the relationship between clinical metadata and microbiome characteristics in a comparative study of gut microbiota profiles in stunted and normal growing children aged 36-45 months. V3-V4 16s rRNA amplicon sequencing data from faecal samples of the children participating in the study were used for the analyses.
